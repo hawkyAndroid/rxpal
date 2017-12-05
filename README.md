@@ -25,7 +25,7 @@ Add it in your root build.gradle at the end of repositories:
 
 <b>Step 3. Extends GeneralSubscriber（Built-In） Or Custom Subscriber</b>
 
-Example:
+for example:
 
 public class MySubscriber extends GeneralSubscriber {
 
@@ -56,7 +56,7 @@ public class MySubscriber extends GeneralSubscriber {
 
 <b>Step 4. You can init Rxpal in Application with onCreate() </b>
 
-Example:
+for example:
 
  RxPal.init("http://xxx.xxx.com", true);
  
