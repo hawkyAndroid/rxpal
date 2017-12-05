@@ -48,8 +48,8 @@ public class MySubscriber extends GeneralSubscriber {
     @Override
     public void onError(Throwable e, int code) {
         super.onError(e, code);
-         // execute failed, do something...
-	 // for example: callBack.onFailure(code, errMsg);...
+        // execute failed, do something...
+	// for example: callBack.onFailure(code, errMsg);...
     }
 
 }
@@ -58,7 +58,7 @@ public class MySubscriber extends GeneralSubscriber {
 
 for example:
 
- RxPal.init("http://xxx.xxx.com", true);
+ RxPal.init("http://xxx.xxx.com/", true);
  
  <b>Step 5. At last, You can wrap it as a RestfulApi.</b>
  
@@ -85,7 +85,7 @@ for example:
 
 <h1> Execution </h1>
 
-    RestfulApi.post(url, params, this, false, new GeneralSubscriber.CallBack() {
+    RestfulApi.post(url, headers, params, this, false, new GeneralSubscriber.CallBack() {
         @Override
         public void onSuccess(Gson gson, String s) {
             // Log.d(TAG,"s:" + s);
