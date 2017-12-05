@@ -71,7 +71,7 @@ for example:
      * @param headers    Request headers
      * @param params     Request params
      * @param context    Context
-     * @param cancelable weather or not can cancel request
+     * @param cancelable whether or not can cancel request
      * @param callBack   callback interface
      */
      public static Subscription post(String url, Map<String, String> headers, Object params, Context context, boolean cancelable, GeneralSubscriber.CallBack callBack) {
