@@ -40,7 +40,6 @@ public class MySubscriber extends GeneralSubscriber {
     @Override
     public void onNext(String result) {
        // execute successful, do something...
-       // for example: 
        // callBack.onSuccess(new Gson(), data);...
        // callBack.onFailure(errCode, errMsg);...
     }
@@ -49,14 +48,12 @@ public class MySubscriber extends GeneralSubscriber {
     public void onError(Throwable e, int code) {
         super.onError(e, code);
         // execute failed, do something...
-	// for example: callBack.onFailure(code, errMsg);...
+	// callBack.onFailure(code, errMsg);...
     }
 
 }
 
 <b>Step 4. You can init Rxpal in Application with onCreate() </b>
-
-for example:
 
  RxPal.init("http://xxx.xxx.com/", true);
  
