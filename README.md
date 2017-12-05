@@ -83,7 +83,7 @@ for example:
 }
 
 
-<h1> Execute </h1>
+<h1> Execution </h1>
 
     RestfulApi.post(url, params, this, false, new GeneralSubscriber.CallBack() {
         @Override
