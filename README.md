@@ -83,4 +83,18 @@ for example:
 }
 
 
+<h1> Execute </h1>
+
+    RestfulApi.post(url, params, this, false, new GeneralSubscriber.CallBack() {
+        @Override
+        public void onSuccess(Gson gson, String s) {
+            // Log.d(TAG,"s:" + s);
+        }
+
+        @Override
+        public void onFailure(int code, String error) {
+            // Log.d(TAG,"code:" + code + ",error:" + error);
+        }
+    });
+
 
