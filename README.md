@@ -70,7 +70,7 @@ for example:
      * @param url        Request url
      * @param headers    Request headers
      * @param params     Request params
-     * @param context    Contxt
+     * @param context    Context
      * @param cancelable weather or not can cancel request
      * @param callBack   callback interface
      */
