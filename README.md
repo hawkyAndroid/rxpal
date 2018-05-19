@@ -18,7 +18,7 @@ Add it in your root build.gradle at the end of repositories:
 
 
 	dependencies {
-	        compile 'com.github.hawkyAndroid:rxpal:0.1'
+	       implementation 'com.github.hawkyAndroid:rxpal:master-SNAPSHOT'
 	}
   
 
