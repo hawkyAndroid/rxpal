@@ -7,10 +7,12 @@ import com.hawky.rxpal.internal.subscriber.BaseSubscriber;
 
 
 /**
- * 内置的Subscriber。只要继承GeneralSubscriber即可，也可以自定义Subscriber(继承BaseSubscriber)
+ * 由于服务器返回的数据格式不确定，所以这里内置了一个Subscriber用于显示请求加载框并抽象出来以供onNext()解析。
+ * <p>
+ * 上层只要继承GeneralSubscriber即可，也可以自定义Subscriber(继承BaseSubscriber)
  *
  * @author [*昨日重现*] lhy_ycu@163.com
- * @since version 1.0
+ * @since version 1.1
  */
 public abstract class GeneralSubscriber extends BaseSubscriber<String> implements LoadingDialog.ProgressListener {
     protected Context context;
@@ -66,13 +68,13 @@ public abstract class GeneralSubscriber extends BaseSubscriber<String> implement
 
     @Override
     public void onCancelProgress() {
-        if (!isUnsubscribed()) {
-            unsubscribe();
-        }
+//        if (!isUnsubscribed()) {
+//            unsubscribe();
+//        }
     }
 
     /**
-     * 请求回调接口
+     * 对外提供的请求回调
      */
     public interface CallBack {
 

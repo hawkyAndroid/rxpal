@@ -18,12 +18,12 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
  */
 public class RetrofitService {
     private static final long DEFAULT_TIMEOUT = 5;// 5s
-    private String BASE_URL;// 服务器地址
-    private boolean DEBUG_LOG;// 日志开关
+    private String mBaseUrl;// 服务器基地址
+    private boolean mDebugLog;// 日志开关
 
     public void init(String baseUrl, boolean debug) {
-        this.BASE_URL = baseUrl;
-        this.DEBUG_LOG = debug;
+        this.mBaseUrl = baseUrl;
+        this.mDebugLog = debug;
     }
 
     public <T> T createService(Class<T> service, Map<String, String> headers) {
@@ -36,13 +36,13 @@ public class RetrofitService {
             builder.addInterceptor(InterceptorFactory.getHeaderInterceptor(headers));
         }
         // 日志拦截
-        if (DEBUG_LOG) {
+        if (mDebugLog) {
             builder.addInterceptor(InterceptorFactory.getHttpLoggingInterceptor());
         }
         OkHttpClient okHttpClient = builder.build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(mBaseUrl)
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addConverterFactory(ScalarsConverterFactory.create())
